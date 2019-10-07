@@ -1,1 +1,9 @@
-BOTTLES/INDEX.erb
+<h1>BOTTLES/INDEX.erb</h1>
+
+<ul>
+  <% @bottles.each do |bottle| %>
+  <li>
+    <%= bottle.name %>
+  </li>
+  <% end %>
+</ul>
