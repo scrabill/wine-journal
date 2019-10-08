@@ -15,6 +15,10 @@ class ApplicationController < Sinatra::Base
     erb :'users/signup'
   end
 
+  post '/signup' do
+    user = User.create(params)
+  end
+
   get '/bottles' do
     @bottles = Bottle.all
     erb :'bottles/index'
