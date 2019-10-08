@@ -16,4 +16,8 @@ class ApplicationController < Sinatra::Base
     erb :'bottles/index'
   end
 
+  get '/bottles/new' do
+    erb :'bottles/new'
+  end
+
 end
