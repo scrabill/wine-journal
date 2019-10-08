@@ -20,4 +20,10 @@ class ApplicationController < Sinatra::Base
     erb :'bottles/new'
   end
 
+  post '/bottles/new' do
+    # puts params {"name"=>"test", "brand"=>"test", "variety"=>"test", "description"=>"test", "note"=>"test"}
+    bottle = Bottle.create(params)
+    redirect "/bottles"
+  end
+
 end
