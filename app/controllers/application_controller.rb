@@ -42,4 +42,9 @@ class ApplicationController < Sinatra::Base
     redirect "/bottles/#{@bottle.id}"
   end
 
+  delete '/bottles/:id' do
+    Bottle.destroy(params["id"])
+    redirect "/bottles"
+  end
+
 end
