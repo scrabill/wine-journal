@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
     erb :'bottles/edit'
   end
 
-  post '/bottles/:id' do
+  patch '/bottles/:id' do
     @bottle = Bottle.find_by_id(params["id"])
     @bottle.update(params["bottle"])
     redirect "/bottles/#{@bottle.id}"
