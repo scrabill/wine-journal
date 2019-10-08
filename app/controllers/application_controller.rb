@@ -26,4 +26,9 @@ class ApplicationController < Sinatra::Base
     redirect "/bottles"
   end
 
+  get '/bottles/:id' do
+    @bottle = Bottle.find_by_id(params["id"])
+    erb :'bottles/show'
+  end
+
 end
