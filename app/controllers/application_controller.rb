@@ -31,4 +31,9 @@ class ApplicationController < Sinatra::Base
     erb :'bottles/show'
   end
 
+  get '/bottles/:id/edit' do
+    @bottle = Bottle.find_by_id(params["id"])
+    erb :'bottles/edit'
+  end
+
 end
