@@ -27,6 +27,15 @@ class ApplicationController < Sinatra::Base
     erb :'users/login'
   end
 
+  post '/login' do
+    @user = User.find_by(:email => params["email"])
+    if @user != nil && @user.password = params["password"]
+      session[:user_id] = @user.id
+      redirect "/bottles"
+    end
+    redirect "/login"
+  end
+
   get '/bottles' do
     @bottles = Bottle.all
     erb :'bottles/index'
