@@ -9,7 +9,8 @@ Specs:
   - A user has_many bottles.
 - [x] Include at least one belongs_to relationship on another model (e.g. Post belongs_to User)
   - A bottle belongs_to many users. A bottle instance is unique, but different users can have different instances of the same type of wine.
-- [ ] Include user accounts with unique login attribute (username or email)
+- [x] Include user accounts with unique login attribute (username or email)
+  - On the /login page, a form asks the user for an email address and password. If the user exists in the database (find by email) and the password matches the password on file, the user is logged in and redirected to the /bottles route.
 - [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
 - [ ] Ensure that users can't modify content created by other users
 - [ ] Include user input validations
