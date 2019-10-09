@@ -24,6 +24,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/login' do
+    erb :'users/login'
   end
 
   get '/bottles' do
