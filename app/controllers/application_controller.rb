@@ -36,6 +36,11 @@ class ApplicationController < Sinatra::Base
     redirect "/login"
   end
 
+  get '/logout' do
+    session.clear
+    redirect "/"
+  end
+
   get '/bottles' do
     @bottles = Bottle.all
     erb :'bottles/index'
