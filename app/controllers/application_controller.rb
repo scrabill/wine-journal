@@ -5,8 +5,10 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
-    enable :sessions
-    set :session_secret, "wine-journal"
+    # enable :sessions
+    # set :session_secret, "wine-journal"
+    enable :sessions unless test?
+    set :session_secret, ENV["SESSION_SECRET"]
   end
 
   get "/" do
@@ -19,6 +21,9 @@ class ApplicationController < Sinatra::Base
 
   post '/signup' do
     user = User.create(params)
+  end
+
+  get '/login' do
   end
 
   get '/bottles' do
