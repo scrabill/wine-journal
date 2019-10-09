@@ -2,7 +2,8 @@
 
 Specs:
 - [x] Use Sinatra to build the app
-- [ ] Use ActiveRecord for storing information in a database
+- [x] Use ActiveRecord for storing information in a database
+  - ActiveRecord including migrations are used for the MVC
 - [x] Include more than one model class (e.g. User, Post, Category).
   - For this application two models were used. A model for users and a models for bottles of wine. Each user will be able to do CRUD operations on the bottles that are in their collection.
 - [x] Include at least one has_many relationship on your User model (e.g. User has_many Posts)
