@@ -42,7 +42,16 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/bottles' do
-    @bottles = Bottle.all
+
+    if Helpers.is_logged_in?(session)
+      @user = Helpers.current_user(session)
+      if @user != nil
+        @bottles = Bottle.where(:user_id => @user.id)
+      end
+    else
+      redirect "/login"
+    end
+
     erb :'bottles/index'
   end
 
