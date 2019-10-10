@@ -52,7 +52,9 @@ class ApplicationController < Sinatra::Base
 
   post '/bottles/new' do
     # puts params {"name"=>"test", "brand"=>"test", "variety"=>"test", "description"=>"test", "note"=>"test"}
+    user = Helpers.current_user(session)
     bottle = Bottle.create(params)
+    bottle.update(user_id: user.id)
     redirect "/bottles"
   end
 
