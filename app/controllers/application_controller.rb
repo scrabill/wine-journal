@@ -88,8 +88,19 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/bottles/:id/edit' do
-    @bottle = Bottle.find_by_id(params["id"])
-    erb :'bottles/edit'
+
+    if Helpers.is_logged_in?(session)
+      @user = Helpers.current_user(session)
+      @bottle = Bottle.find_by_id(params["id"])
+      if @user.id == @bottle.user_id
+        erb :'bottles/edit'
+      else
+        redirect "/login"
+      end
+    else
+      redirect "/login"
+    end
+
   end
 
   patch '/bottles/:id' do
