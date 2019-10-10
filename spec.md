@@ -12,7 +12,10 @@ Specs:
   - A bottle belongs_to many users. A bottle instance is unique, but different users can have different instances of the same type of wine.
 - [x] Include user accounts with unique login attribute (username or email)
   - On the /login page, a form asks the user for an email address and password. If the user exists in the database (find by email) and the password matches the password on file, the user is logged in and redirected to the /bottles route.
-- [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
+- [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
+  - Creating, when a user is logged in, any bottles they create as associated with their user_id. If they are not logged in, redirect to the signup page.
+  - The create a new bottle page can only be accessed by login users. If they are not logged in, they are redirected to the sign in page (what if they never created an account)
+  - Similar logic is used for viewing a specific bottle and viewing the edit/delete page for a specific bottle
 - [ ] Ensure that users can't modify content created by other users
 - [ ] Include user input validations
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
