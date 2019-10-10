@@ -56,7 +56,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/bottles/new' do
-    erb :'bottles/new'
+    if Helpers.is_logged_in?(session)
+      erb :'bottles/new'
+    else
+      redirect "/login"
+    end
   end
 
   post '/bottles/new' do
