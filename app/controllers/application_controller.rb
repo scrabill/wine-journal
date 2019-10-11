@@ -79,7 +79,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  post '/bottles/new' do
+  post '/bottles' do
     # puts params {"name"=>"test", "brand"=>"test", "variety"=>"test", "description"=>"test", "note"=>"test"}
     user = Helpers.current_user(session)
 
