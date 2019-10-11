@@ -21,13 +21,20 @@ class ApplicationController < Sinatra::Base
 
   post '/signup' do
 
-    user = User.create(params)
-
-    if user.save
-      session[:user_id] = user.id
-      redirect "/"
+    if User.find_by(:email => params["email"])
+      puts "Sorry, there is already an account using this email address"
+      redirect "/login"
     else
-      puts "Sorry. All fields must be filled out."
+      user = User.create(params)
+
+      if user.save
+        session[:user_id] = user.id
+        redirect "/"
+      else
+        puts "Sorry. All fields must be filled out."
+        redirect "/signup"
+      end
+
     end
 
   end
