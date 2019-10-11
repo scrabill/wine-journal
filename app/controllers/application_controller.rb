@@ -20,7 +20,16 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/signup' do
+
     user = User.create(params)
+
+    if user.save
+      session[:user_id] = user.id
+      redirect "/"
+    else
+      puts "Sorry. All fields must be filled out."
+    end
+
   end
 
   get '/login' do
