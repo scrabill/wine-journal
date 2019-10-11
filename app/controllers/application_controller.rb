@@ -111,9 +111,14 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/bottles/:id' do
-    @bottle = Bottle.find_by_id(params["id"])
-    @bottle.update(params["bottle"])
-    redirect "/bottles/#{@bottle.id}"
+
+    if @user.id == @bottle.user_id
+      @bottle.update(params["bottle"])
+      redirect "/bottles/#{@bottle.id}"
+    else
+      redirect "/login"
+    end
+
   end
 
   delete '/bottles/:id' do
