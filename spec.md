@@ -19,7 +19,8 @@ Specs:
 - [x] Ensure that users can't modify content created by other users
   - Edit and delete pages can only be seen by the owner of the content.
   - As a second line of protection, at the point of updating or deleting, it is double checked if the current user have permisssion. If they do not have permissions, the actions are not executed.
-- [ ] Include user input validations
+- [x] Include user input validations
+ - Objects will only be created or saved to the database if there are no empty inputs.
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
