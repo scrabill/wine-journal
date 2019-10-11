@@ -16,7 +16,9 @@ Specs:
   - Creating, when a user is logged in, any bottles they create as associated with their user_id. If they are not logged in, redirect to the signup page.
   - The create a new bottle page can only be accessed by login users. If they are not logged in, they are redirected to the sign in page (what if they never created an account)
   - Similar logic is used for viewing a specific bottle and viewing the edit/delete page for a specific bottle
-- [ ] Ensure that users can't modify content created by other users
+- [x] Ensure that users can't modify content created by other users
+  - Edit and delete pages can only be seen by the owner of the content.
+  - As a second line of protection, at the point of updating or deleting, it is double checked if the current user have permisssion. If they do not have permissions, the actions are not executed.
 - [ ] Include user input validations
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
