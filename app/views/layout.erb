@@ -16,6 +16,16 @@
   <body>
     <div class="wrapper">
 
+        <nav>
+        <% if Helpers.current_user(session) %>
+          <a href="/logout">Logout</a>
+        <% else %>
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
+        <% end %>
+        </nav>
+
+
         <%= yield %>
 
         <a href="/bottles">All Bottles</a>
