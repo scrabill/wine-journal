@@ -125,8 +125,18 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/bottles/:id' do
-    Bottle.destroy(params["id"])
-    redirect "/bottles"
+
+    @user = Helpers.current_user(session)
+    @bottle = Bottle.find_by_id(params["id"])
+
+    if @user.id == @bottle.user_id
+      @bottle.destroy
+      redirect "/bottles"
+    else
+      redirect "/login"
+    end
+
+
   end
 
 end
