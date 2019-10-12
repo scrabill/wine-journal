@@ -31,6 +31,14 @@ Commit `.gitignore`
 
 > **Note**: Since the `.env` file contains sensitive information, it should not be tracked, committed or push to Github. Please see this post on [Hiding Sensitive Information with Environmental Variables in Ruby](https://shannoncrabill.com/blog/hiding-sensitive-information-with-environmental-variables-in-ruby/) for more information.
 
+### Seeding the Database
+
+Wine journal is now ready to use!
+
+If you want to pre-populate the database with wine bottles (some of my personal favorites) run `rake db:seed`.
+
+The wine bottles created by the seed file will belong to the user with an ID of 1.
+
 ## Additional Links
 
 - [Contributing](CONTRIBUTING.md)
