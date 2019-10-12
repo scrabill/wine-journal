@@ -1,8 +1,16 @@
-BOTTLES/SHOW
+<h1><%= @bottle.name %></h1>
 
-This is the view of bottle #<%= @bottle.id %>
+<h2>Brand</h2>
+<p><%= @bottle.brand %></p>
 
-<p><%= @bottle.name %></p>
+<h2>Variety</h2>
+<p><%= @bottle.variety %></p>
+
+<h2>Description</h2>
+<p><%= @bottle.description %></p>
+
+<h2>Notes</h2>
+<p><%= @bottle.note %></p>
 
 <p><a href="/bottles">Back to all wine bottles</a></p>
 <p><a href="/bottles/<%= @bottle.id %>/edit">Edit this bottle</a></p>
