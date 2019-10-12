@@ -10,26 +10,31 @@
     <title>Wine Journal</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap" rel="stylesheet">
 
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
     <div class="wrapper">
 
         <nav>
-        <% if Helpers.current_user(session) %>
-          <a href="/logout">Logout</a>
-        <% else %>
-          <a href="/login">Login</a>
-          <a href="/signup">Sign Up</a>
-        <% end %>
+          <a href="/"><i class="fas fa-wine-bottle" style="text-align: left;"></i>&nbsp;&nbsp;&nbsp;Wine Journal</a>
+
+          <span style="align: right; float:right; text-align:right;">
+          <% if Helpers.current_user(session) %>
+            Hello, <%= Helpers.current_user(session).name %> |
+            <a href="/bottles">Bottles</a> |
+            <a href="/logout">Logout</a>
+          <% else %>
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+          <% end %>
+          </span>
         </nav>
 
-
         <%= yield %>
-
-        <a href="/bottles">All Bottles</a>
-        <a href="/bottles/new">Create a New Bottle</a>
 
       <footer class="branding">
         <small>&copy; 2019 <strong>Wine Journal</strong></small>
