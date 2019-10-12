@@ -20,13 +20,7 @@ So, I built an app for that. Welcome to Wine Journal.
 
 ### Enabling Sessions
 
-To enable sessions, create a `.env` and `.gitignore` file in the root directory.
-
-In `.gitignore`, add the following so that the file is not tracked by Git.
-
-```
-.env
-```
+To enable sessions, create a `.env` file in the root directory.
 
 In `.env` add the following, replacing the string `ABC123` with a secret word or string.
 
