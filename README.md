@@ -41,3 +41,4 @@ Commit `.gitignore`
 
 - [Contributing](CONTRIBUTING.md)
 - [License](LICENSE.md)
+- [Spec](spec.md)
