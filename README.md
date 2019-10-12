@@ -28,3 +28,8 @@ SESSION_SECRET="ABC123"
 Commit `.gitignore`
 
 > **Note**: Since the `.env` file contains sensitive information, it should not be tracked, committed or push to Github. Please see this post on [Hiding Sensitive Information with Environmental Variables in Ruby](https://shannoncrabill.com/blog/hiding-sensitive-information-with-environmental-variables-in-ruby/) for more information.
+
+## Additional Links
+
+- [Contributing](CONTRIBUTING.md)
+- [License](LICENSE.md)
