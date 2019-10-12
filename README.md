@@ -2,6 +2,14 @@
 
 A Sinatra based application for keeping track of your favorite wines. 🍷
 
+## About
+
+I have a habit of not taking very good notes.
+
+I assume that I will remember something. Like that really good wine I bought that one time. Don't you remember? The one with the...label?
+
+So, I built an app for that. Welcome to Wine Journal.
+
 ## Installation
 
 1. Fork the repository
