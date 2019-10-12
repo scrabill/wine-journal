@@ -22,7 +22,7 @@ Specs:
 - [x] Include user input validations
  - Objects will only be created or saved to the database if there are no empty inputs.
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
 - [ ] You have a large number of small Git commits
