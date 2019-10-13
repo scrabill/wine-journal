@@ -1,58 +1,23 @@
 @media screen {
-  /* --- Reset Styles --- */
-  * {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 
   html, body {
     height: 100%;
     width: 100%;
   }
 
-  /* --- Welcome Page Styles --- */
+  /* --- Structure --- */
+
   body {
-    background-color: lightblue;
-    color: #333;
-    font-family: Sans-Serif;
-    line-height: 18px;
+    background-color: #1f0011;
+    color: #efefef;
+    font-family: 'Noto Serif JP', serif;
+    margin: 0 auto;
   }
 
   .wrapper {
-    background: #fff;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 960px;
-    padding: 2.25%; /* 18px / 800px */
-    width: 85%;
-  }
-
-  h1 {
-    font-size: 36px;
-    line-height: 54px;
-  }
-
-  h2 {
-    border-bottom: 2px solid #ccc;
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 16px;
-  }
-
-  h3 {
-    font-size: 18px;
-    line-height: 36px;
-  }
-
-  p {
-    margin-bottom: 18px;
-  }
-
-  .main {
-    overflow: hidden;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
   }
 
   .content {
@@ -60,30 +25,75 @@
     width: 60%; /* 480px / 800px */
   }
 
-  .sidebar {
-    background: #eee;
-    border: 1px solid #ccc;
-    float: right;
-    padding: 2.08333333333%; /* 5px / 240px */
-    width: 30%; /* 240px / 800px */
-  }
-
-  .sidebar ul {
-    font-size: 14px;
-  }
-
   .branding {
     clear: both;
   }
 
+  nav, footer {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  footer {
+    bottom: 0px;
+  }
+
   footer.branding {
-    border-top: 2px solid #ccc;
     margin-top: 20px;
     padding-top: 20px;
   }
+
+  /* --- Fonts --- */
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 150%;
+    margin-bottom: 18px;
+  }
+
+  /* --- Links --- */
+
+  a, a:visited {
+    color: #750e49;
+    font-weight: bold;
+    text-decoration: none;
+    /* border-bottom: 1px solid #efefef; */
+  }
+
+  /* --- Forms --- */
+
+  input {
+      display: inline-block;
+      width: 100%;
+      height: 30px;
+      border: none;
+      border-radius: 3px;
+      margin: 10px 0;
+      padding: 5px;
+  }
+
+  input[type="submit"] {
+      color: white;
+      background-color: #750e49;
+      max-width: 200px;
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+  }
+
+
+
+
 }
 
-@media screen and (max-width: 600px) {
+
+
+/* @media screen and (max-width: 600px) {
   .wrapper {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -112,4 +122,4 @@
     font-size: 18px;
     line-height: 24px;
   }
-}
+} */
