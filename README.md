@@ -12,6 +12,8 @@ So, I built an app for that. Welcome to Wine Journal.
 
 ![Screenshot of Wine Journal welcome page](/public/images/wine-journal-homepage.png)
 
+Details on my process, lessons learned and plans for the future can be found in my blog post [Building a Wine Journal Application with Sinatra](https://shannoncrabill.com/blog/sinatra-crud-application/).
+
 ## Installation
 
 1. Fork the repository
