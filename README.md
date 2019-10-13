@@ -10,6 +10,8 @@ I assume that I will remember something. Like that really good wine I bought tha
 
 So, I built an app for that. Welcome to Wine Journal.
 
+![Screenshot of Wine Journal welcome page](/public/images/wine-journal-homepage.png)
+
 ## Installation
 
 1. Fork the repository
