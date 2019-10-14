@@ -47,4 +47,5 @@ The wine bottles created by the seed file will belong to the user with an ID of 
 
 - [Contributing](CONTRIBUTING.md)
 - [License](LICENSE.md)
+- [Resources](RESOURCES.md)
 - [Spec](spec.md)
