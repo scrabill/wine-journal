@@ -20,16 +20,15 @@
     <div class="wrapper">
 
         <nav>
-          <a href="/"><i class="fas fa-wine-bottle" style="text-align: left;"></i>&nbsp;&nbsp;&nbsp;Wine Journal</a>
+          <a href="/"><i class="fas fa-wine-bottle left"></i>&nbsp;&nbsp;&nbsp;Wine Journal</a>
 
-          <span style="align: right; float:right; text-align:right;">
+          <span class="right">
           <% if Helpers.current_user(session) %>
             Hello, <%= Helpers.current_user(session).name %> |
             <a href="/bottles">Bottles</a> |
             <a href="/logout">Logout</a>
           <% else %>
-            <a href="/login">Login</a>
-            <a href="/signup">Sign Up</a>
+            <a href="/login">Login</a> or <a href="/signup">Sign Up</a>
           <% end %>
           </span>
         </nav>
