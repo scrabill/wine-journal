@@ -1,5 +1,7 @@
 # Specifications for the Sinatra Assessment
 
+A detailed account of my process can be found at [Building a Wine Journal Application with Sinatra](https://shannoncrabill.com/blog/sinatra-crud-application/)
+
 Specs:
 - [x] Use Sinatra to build the app
 - [x] Use ActiveRecord for storing information in a database
@@ -18,7 +20,7 @@ Specs:
   - Similar logic is used for viewing a specific bottle and viewing the edit/delete page for a specific bottle
 - [x] Ensure that users can't modify content created by other users
   - Edit and delete pages can only be seen by the owner of the content.
-  - As a second line of protection, at the point of updating or deleting, it is double checked if the current user have permisssion. If they do not have permissions, the actions are not executed.
+  - As a second line of protection, at the point of updating or deleting, it is double checked if the current user has permission. If they do not have permissions, the actions are not executed.
 - [x] Include user input validations
  - Objects will only be created or saved to the database if there are no empty inputs.
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
