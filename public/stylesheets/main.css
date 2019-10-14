@@ -86,4 +86,16 @@
       font-size: 16px;
   }
 
+  /* --- Misc --- */
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    align: right;
+    float: right;
+    text-align: right;
+  }
+
 }
