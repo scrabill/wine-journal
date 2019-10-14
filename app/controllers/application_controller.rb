@@ -5,8 +5,6 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
-    # enable :sessions
-    # set :session_secret, "wine-journal"
     enable :sessions unless test?
     set :session_secret, ENV["SESSION_SECRET"]
   end
@@ -80,7 +78,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/bottles' do
-    # puts params {"name"=>"test", "brand"=>"test", "variety"=>"test", "description"=>"test", "note"=>"test"}
     user = Helpers.current_user(session)
 
     bottle = user.bottles.create(params)
