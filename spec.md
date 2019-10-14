@@ -1,6 +1,6 @@
 # Specifications for the Sinatra Assessment
 
-A detailed account of my process can be found at [Building a Wine Journal Application with Sinatra](https://shannoncrabill.com/blog/sinatra-crud-application/)
+A detailed account of my process can be found at [Building a Wine Journal Application with Sinatra](https://shannoncrabill.com/blog/sinatra-crud-application/).
 
 Specs:
 - [x] Use Sinatra to build the app
