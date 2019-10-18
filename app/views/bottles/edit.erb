@@ -4,21 +4,21 @@
   <input type="hidden" name="_method" value="patch">
 
   <label for="name">Name</label>
-  <input type="text" name="bottle[name]" value="<%= @bottle.name %>"/>
+  <input type="text" name="bottle[name]" id="name" value="<%= @bottle.name %>"/>
 
-  <label for="name">Brand</label>
-  <input type="text" name="bottle[brand]" value="<%= @bottle.brand %>"/>
+  <label for="brand">Brand</label>
+  <input type="text" name="bottle[brand]" id="brand" value="<%= @bottle.brand %>"/>
 
   <label for="variety">Variety</label>
-  <input type="text" name="bottle[variety]" value="<%= @bottle.variety %>"/>
+  <input type="text" name="bottle[variety]" id="variety" value="<%= @bottle.variety %>"/>
 
   <label for="description">Description</label>
-  <input type="textarea" name="bottle[description]" value="<%= @bottle.description %>"/>
+  <input type="textarea" name="bottle[description]" id="description" value="<%= @bottle.description %>"/>
 
   <label for="note">Note</label>
-  <input type="textarea" name="bottle[note]" value="<%= @bottle.note %>"/>
+  <input type="textarea" name="bottle[note]" id="note" value="<%= @bottle.note %>"/>
 
-  <input type="submit" value="submit">
+  <input type="submit" value="Submit">
 </form>
 
 <form action="/bottles/<%= @bottle.id %>" method="post">
